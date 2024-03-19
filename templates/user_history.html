@@ -1,0 +1,42 @@
+{% extends 'dummy.html' %}
+
+{% block title %}
+    <title>Home Page</title>
+
+{% endblock %}
+
+
+{% block body_block %}
+
+<style>
+    th
+    {
+        color: brown;
+    }
+</style>
+
+<center style="margin-top: 50px;">
+<h1 style="color: blue;">History of User is </h1> <br>
+    <table border="3px">
+        <tr><th>Username</th>
+            <th>City</th>
+            <th>Temperature</th>
+            <th>Humidity</th>
+            <th>Weather</th>
+            <th>Speed</th>
+            <th>Timestamp</th>
+        </tr>
+{% for obj in LWO %}
+        <tr><td>{{obj.username}}</td>
+            <td>{{obj.city}}</td>
+            <td>{{obj.temperature}}</td>
+            <td>{{obj.humidity}}</td>
+            <td>{{obj.weather}}</td>
+            <td>{{obj.speed}}</td>
+            <td>{{obj.timestamp}}</td>
+        </tr>
+{% endfor %}
+
+    </table>
+</center>
+{% endblock %}

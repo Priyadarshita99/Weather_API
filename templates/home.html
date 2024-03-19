@@ -1,0 +1,25 @@
+{% extends 'dummy.html' %}
+
+{% block title %}
+    <title>Home</title>
+    <style>
+        h1
+        {
+            margin-top: 50px;
+            color: cornflowerblue;
+        }
+    </style>
+{% endblock %}
+
+<body>
+
+{% block body_block %}
+    <center>
+        {% if username %}
+            <h1>Welcome  to Home Page Mr./Ms. {{username}}</h1>
+        {% else %}
+            <h1>Welcome to Home Page</h1>
+        {% endif %}
+    </center>
+{% endblock %}
+</body>

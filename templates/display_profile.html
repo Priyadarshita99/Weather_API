@@ -1,0 +1,36 @@
+{% extends 'dummy.html' %}
+
+{% block title %}
+    <title>Display details</title>
+    <style>
+        h1
+        {
+            margin-top: 50px;
+        }
+    </style>
+{% endblock %}
+
+<body>
+
+{% block body_block %}
+    <center>
+        <h1 style="color: blue;font-family: cursive;">Displaying the details of user:-</h1>  <br>
+<table border="3px">
+    <tr><th>Username</th>
+    <th>Email</th>
+    <th>Address</th>
+    <th>ProfilePic</th>
+
+
+</tr>
+<tr>
+        <td><h2>{{UO.username}}</h2></td>
+        <td><h2>{{UO.email}}</h2></td>
+        <td><h2>{{PO.address}}</h2></td>
+        <td><img src="{{PO.profile_pic.url}}" alt="" width="150px" height="200px"></td>
+    </tr>
+
+    </table>
+    </center>
+{% endblock %}
+</body>
